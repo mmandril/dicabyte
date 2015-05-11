@@ -1,11 +1,60 @@
-<md-toolbar data-ng-controller="HeaderController">
-  <div class="md-toolbar-tools">    
-    <h2>
-      <span>Dica Byte</span>
-    </h2>
-    <span flex></span>
-    <md-button class="md-icon-button" aria-label="Home" data-ng-href="#!/">
-      Home
-    </md-button>
+<!-- <md-toolbar data-ng-controller="HeaderController">
+<div class="md-toolbar-tools">    
+<h2>
+<span>Dica Byte</span>
+</h2>
+<span flex></span>
+<md-button class="md-icon-button" aria-label="Home" data-ng-href="#!/">
+Home
+</md-button>
+</div>
+</md-toolbar> -->
+
+<header id="header" data-ng-controller="HeaderController">  
+  <ul class="header-inner">
+    <li id="menu-trigger" data-trigger="#sidebar">
+      <div class="line-wrap">
+        <div class="line top"></div>
+        <div class="line center"></div>
+        <div class="line bottom"></div>
+      </div>
+    </li>
+
+    <li class="logo hidden-xs">
+      <a href="#!/">Dicabyte</a>
+    </li>
+
+    <li class="pull-right">
+      <ul class="top-menu">        
+        <li id="top-search">
+          <a class="tm-search" href="#"></a>
+        </li>                      
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Top Search Content -->
+  <div id="top-search-wrap">
+    <input type="text">
+    <i id="top-search-close">&times;</i>
   </div>
-</md-toolbar>
+</header>
+
+<aside id="sidebar" data-ng-controller="HeaderController" data-ng-init="init()">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      <li class="sub-menu" data-ng-repeat="categoria in categorias" data-ng-init="idCat = categoria._id">
+          <a href="index.html">
+            {{categoria.nome}}
+          </a>
+          <ul data-ng-init="carregaSub(categoria)">
+            <li ng-repeat="subCat in pegaSubList(idCat)">
+              <a href="#">
+                {{subCat.nome}}
+              </a>
+            </li>
+          </ul>
+      </li>
+    </ul> 
+  </div>
+</aside>

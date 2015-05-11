@@ -13,8 +13,11 @@ module.exports = {
   assets: {
     lib: {
       css: [
-        'public/lib/angular-material/angular-material.css',
-        'public/lib/angular-hero/angular-hero.css',        
+        'public/lib/vendors/fullcalendar/fullcalendar.css',
+        'public/lib/vendors/animate-css/animate.min.css',       
+        'public/lib/vendors/sweet-alert/sweet-alert.min.css',   
+        'public/lib/vendors/material-icons/material-design-iconic-font.min.css',   
+        'public/lib/vendors/socicon/socicon.min.css',   
       ],
       js: [
         'public/lib/angular/angular.js',
@@ -25,9 +28,22 @@ module.exports = {
         'public/lib/angular-sanitize/angular-sanitize.js', 
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/angular-ui-utils/ui-utils.js',
-        'public/lib/angular-aria/angular-aria.js',
-        'public/lib/angular-material/angular-material.js',
-        'public/lib/angular-hero/angular-hero.js',
+
+        'public/lib/jquery/dist/jquery.js',
+        'public/lib/bootstrap/dist/js/bootstrap.js',
+        'public/lib/vendors/flot/jquery.flot.min.js',
+        'public/lib/vendors/flot/jquery.flot.resize.min.js',
+        'public/lib/vendors/flot/plugins/curvedLines.js',
+        'public/lib/vendors/sparklines/jquery.sparkline.min.js',
+        'public/lib/vendors/easypiechart/jquery.easypiechart.min.js',
+        'public/lib/vendors/fullcalendar/lib/moment.min.js',
+        'public/lib/vendors/fullcalendar/fullcalendar.min.js',
+        'public/lib/vendors/simpleWeather/jquery.simpleWeather.min.js',
+        'public/lib/vendors/auto-size/jquery.autosize.min.js',
+        'public/lib/vendors/nicescroll/jquery.nicescroll.min.js',
+        'public/lib/vendors/waves/waves.min.js',
+        'public/lib/vendors/bootstrap-growl/bootstrap-growl.min.js',
+        'public/lib/vendors/sweet-alert/sweet-alert.min.js',
       ]
     },
     css: [
