@@ -1,0 +1,24 @@
+<section data-ng-controller="HomeController" data-ng-init="find()">
+  <md-progress-linear md-mode="indeterminate" data-ng-show="showProgress"></md-progress-linear> 
+
+  <br/>
+  <div layout="row" layout-wrap>
+    <div flex="33" data-ng-repeat="categoria in categorias" data-ng-init="idCat = categoria._id">
+      <md-toolbar class="md-primary md-hue-1 animated fadeIn">
+        <div class="md-toolbar-tools" data-ng-class="expression">
+          <h2 class="md-flex">{{categoria.nome}}</h2>
+        </div>        
+      </md-toolbar>
+      <md-content>
+        <md-list data-ng-init="carregaSub(categoria)">
+          <md-list-item class="md-2-line" ng-repeat="subCat in pegaSubList(idCat)">
+            <div class="md-list-item-text">
+              <md-button data-ng-href="#!/tipo/{{subCat._id}}/list">{{subCat.nome}}</md-button>
+            </div>
+            <md-divider inset data-ng-if="!$last"></md-divider>
+          </md-list-item>
+        </md-list>
+      </md-content>
+    </div>
+  </div>
+</section>

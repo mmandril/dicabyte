@@ -1,0 +1,28 @@
+<section>
+  <md-progress-linear md-mode="indeterminate" data-ng-show="showProgress"></md-progress-linear> 
+
+  <br/>
+   
+  <div layout="row" layout-wrap data-ng-show="tipos">
+    <div flex="100">
+      <md-toolbar class="md-primary md-hue-1 animated fadeIn">
+        <div class="md-toolbar-tools" data-ng-class="expression">
+          <h2 class="md-flex">{{subCategoria.nome}}</h2>
+        </div>        
+      </md-toolbar>
+      <md-content>
+        <div flex="50">
+          <md-list>
+            <md-list-item class="md-2-line" ng-repeat="tipo in tipos">
+              <div class="md-list-item-text">
+                <md-button data-ng-href="#!/produto/{{tipo._id}}/list">{{tipo.nome}}</md-button>
+              </div>
+              <md-divider inset data-ng-if="!$last"></md-divider>
+            </md-list-item>
+          </md-list>
+        </div>
+      </md-content>
+    </div>
+  </div>
+  
+</section>

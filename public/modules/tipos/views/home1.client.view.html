@@ -1,0 +1,114 @@
+<section>
+  <md-progress-linear md-mode="indeterminate" data-ng-show="showProgress"></md-progress-linear> 
+
+  <br/>
+   
+  <div layout="row" layout-wrap data-ng-show="tipo">
+    <div flex="100">
+      <md-toolbar class="md-primary md-hue-1 animated fadeIn">
+        <div class="md-toolbar-tools" data-ng-class="expression">
+          <h2 class="md-flex">{{tipo.nome}}</h2>
+        </div>        
+      </md-toolbar>
+      <md-content>
+        <div layout="row" flex="100">
+          <h3>Formulário de Busca</h3>          
+        </div>
+        <md-divider></md-divider>
+        <div layout="row">
+          <div flex="20">
+            <md-input-container>
+              <label>Fabricante</label>
+              <input ng-model="produto.fabricante">
+            </md-input-container>
+          </div>
+          <div flex="20">
+            <md-input-container>
+              <label>Modelo</label>
+              <input ng-model="produto.modelo">
+            </md-input-container>
+          </div>
+          <div flex="20">
+            <md-input-container>
+              <label>Especifiação</label>
+              <input ng-model="produto.especificacao">
+            </md-input-container>
+          </div>
+          <div flex="20">
+            <md-input-container>
+              <label>Loja</label>
+              <input ng-model="produto.loja">
+            </md-input-container>
+          </div>
+          <div flex="20">
+            <md-input-container>
+              <label>Local</label>
+              <input ng-model="produto.local">
+            </md-input-container>
+          </div>
+        </div>
+
+         <div layout="row" flex="100">
+          <h3>Lista de Produtos</h3>          
+        </div>
+        <md-divider></md-divider>
+        <br/>
+        <div class="table-responsive-vertical shadow-z-1">
+          <table id="table" class="table table-hover table-mc-light-blue"> 
+            <thead>
+              <tr>
+                 <th>Fabricante</th>
+                 <th>Modelo</th>
+                 <th>Especificação</th>
+                 <th>Preço</th>
+                 <th>Loja</th>
+                 <th>Local</th>
+              </tr>
+              <tr>
+                <th colspan="6">
+                  <md-divider ng-if="!$last"></md-divider>
+                </tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-ng-repeat="produto in produtos | startFrom:currentPage*pageSize | limitTo:pageSize">
+                <td>
+                   {{produto.fabricante}}
+                </td>
+                <td>
+                   {{produto.modelo}}
+                </td>
+                <td>
+                  {{produto.especificacao}}
+                </td>
+                <td>
+                  {{produto.preco | currency: "R$ "}}
+                </td>
+                <td>
+                  {{produto.loja}}
+                </td>
+                <td>
+                  {{produto.local}}
+                </td>
+              </tr>            
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6">
+                  <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+                      Anterior
+                  </button>
+                  {{currentPage+1}}/{{numberOfPages()}}
+                  <button ng-disabled="currentPage >= produtos.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+                      Próximo
+                  </button>
+                </td>
+              </tr>
+            </tfoot>
+          </table>   
+        </div>
+      </md-content>
+    </div>
+  </div>
+  
+</section>
