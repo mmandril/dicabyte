@@ -32,8 +32,8 @@
 
 
     $scope.$watch('produto', function (produto) {
-      console.log(produto);
-     $scope.produtos = $filter('filter')($scope.produtoList, {fabricante: produto.fabricante, modelo: produto.modelo, especificacao: produto.especificacao, loja: produto.loja, local:produto.local});
+      $scope.currentPage = 0;
+      $scope.produtos = $filter('filter')($scope.produtoList, {fabricante: produto.fabricante, modelo: produto.modelo, especificacao: produto.especificacao, loja: produto.loja, local:produto.local});
       
       $scope.numberOfPages=function(){
         return Math.ceil($scope.produtos.length/$scope.pageSize); 

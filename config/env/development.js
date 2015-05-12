@@ -1,8 +1,7 @@
 'use strict';
 
 module.exports = {
-	//db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/dicabyte',
-	db: 'mongodb://dicabyte:dica123byte@ds031952.mongolab.com:31952/dicabyte',
+	db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/dicabyte',
 	app: {
 		title: 'DicaByte - Development Environment'
 	},
