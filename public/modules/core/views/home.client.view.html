@@ -1,3 +1,19 @@
-<section data-ng-controller="HomeController">
+<section data-ng-controller="HomeController" id="content">
   <md-progress-linear md-mode="indeterminate" data-ng-show="showProgress"></md-progress-linear> 
+
+
+  <div class="container">
+    <div class="block-header">
+      <h2>Dados do site <small>Abaixo contém alguns números com dados do site.</small></h2> 
+    </div>
+    <div class="col-sm-3">
+      <div class="mini-charts-item bgm-cyan">
+        <div class="clearfix">        
+          <div class="count">
+            <small>Total de produtos</small>
+            <h2>{{totalProdutos}}</h2>
+          </div>
+        </div>
+      </div>
+    </div>  
 </section>

@@ -49,7 +49,7 @@ Home
           </a>
           <ul data-ng-init="carregaSub(categoria)">
             <li ng-repeat="subCat in pegaSubList(idCat)">
-              <a href="#">
+              <a href="#!/tipo/{{subCat._id}}/list">
                 {{subCat.nome}}
               </a>
             </li>

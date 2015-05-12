@@ -3,9 +3,18 @@
 
   angular.module('core').controller('HomeController', HomeController);
 
-  function HomeController ($scope, CategoriaService, $location, SubCategoriaService) {
+  function HomeController ($scope, $location, ProdutoService) {
     
+    var produtoService = ProdutoService;
+
+    produtoService.total()
+    .success(function(data){
+      $scope.totalProdutos = data;
+    })
+    .error(function(err){
+      console.log(err);
+    });
   }
 
-  HomeController.$inject = ['$scope', 'CategoriaService', '$location', 'SubCategoriaService'];
+  HomeController.$inject = ['$scope', '$location', 'ProdutoService'];
 })();

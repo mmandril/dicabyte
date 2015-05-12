@@ -21,3 +21,16 @@ exports.list = function(req, res) {
      }
    });
 };
+
+exports.listTotal = function(req, res) {  
+  Produto.count({})
+   .exec(function(err, total){
+     if (err) {
+       return res.status(400).send({
+         message: errorHandler.getErrorMessage(err)
+       });
+     }else {      
+      res.jsonp(total);           
+     }
+   });
+};
