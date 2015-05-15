@@ -3,7 +3,9 @@
 module.exports = {
 	db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/dicabyte',
 	app: {
-		title: 'DicaByte - Development Environment'
+		title: 'DicaByte - O Jeito mais fácil de achar prodtos de informática na internet!',
+    description: 'Busca de produtos de lojas físicas relacionadas a informática e afins.',
+    keywords: 'busca, boa, dica, byte, bite, biti, byti, dicabyte, informatica, notebook, pc, computador, memoria, impressora, hd, dvd, cd, comparação, comparacao, preco, preço, compra, compras, processador, scanner, celular, tablet, tablets, camera, câmera, gps, smartphone, led, lcd, infocentro, infobarra, infonorte, info, apple, iphone, ipad'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
