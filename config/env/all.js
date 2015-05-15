@@ -4,8 +4,7 @@ module.exports = {
   app: {
     title: 'DicaByte - O Jeito mais fácil de achar prodtos de informática na internet!',
     description: 'Busca de produtos de lojas físicas relacionadas a informática e afins.',
-    keywords: 'busca, boa, dica, byte, bite, biti, byti, dicabyte, informatica, notebook, pc, computador, memoria, impressora, hd, dvd, cd, comparação, comparacao, preco, preço, compra, compras, processador, 
-    scanner, celular, tablet, tablets, camera, câmera, gps, smartphone, led, lcd, infocentro, infobarra, infonorte, info, apple, iphone, ipad'
+    keywords: 'busca, boa, dica, byte, bite, biti, byti, dicabyte, informatica, notebook, pc, computador, memoria, impressora, hd, dvd, cd, comparação, comparacao, preco, preço, compra, compras, processador, scanner, celular, tablet, tablets, camera, câmera, gps, smartphone, led, lcd, infocentro, infobarra, infonorte, info, apple, iphone, ipad'
   },
   port: process.env.PORT || 3000,
   templateEngine: 'swig',
