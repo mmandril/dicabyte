@@ -337,7 +337,14 @@ $(document).ready(function(){
      * Custom Scrollbars
      */
     function scrollbar(className, color, cursorWidth) {
-        
+        $(className).niceScroll({
+            cursorcolor: color,
+            cursorborder: 0,
+            cursorborderradius: 0,
+            cursorwidth: cursorWidth,
+            bouncescroll: true,
+            mousescrollstep: 100
+        });
     }
 
     //Scrollbar for HTML(not mobile) but not for login page
