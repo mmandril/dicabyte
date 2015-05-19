@@ -8,9 +8,9 @@
       $urlRouterProvider.otherwise('/');
 
       // Home state routing
-       $stateProvider
-       .state('produto', {
-        url: '/produto/:idTipo/list',
+       $stateProvider       
+       .state('subCatProduto', {
+        url: '/produto/:idSubCat/list',
         templateUrl: 'modules/produtos/views/home.client.view.html',
         controller: 'ProdutoController'
       });
