@@ -6,13 +6,16 @@
   function HomeController ($scope, $location, ProdutoService, CategoriaService, SubCategoriaService) {
     
     var produtoService = ProdutoService;
+    $scope.showProgress = true;
 
     produtoService.total()
     .success(function(data){
       $scope.totalProdutos = data;
+      $scope.showProgress = false;
     })
     .error(function(err){
       console.log(err);
+      $scope.showProgress = false;
     });
 
     $scope.init = function() {
@@ -28,7 +31,6 @@
 
       $scope.carregaSub = function(cat) {
         var subCatService = SubCategoriaService;
-        $scope.showProgress = true;
         subCatService.find(cat)
         .success(function(data){
           var arraySub = '.subCategorias.' + cat._id;

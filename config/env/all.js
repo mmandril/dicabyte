@@ -13,11 +13,13 @@ module.exports = {
   assets: {
     lib: {
       css: [
+        'public/lib/angular-material/angular-material.css', 
         'public/lib/vendors/fullcalendar/fullcalendar.css',
         'public/lib/vendors/animate-css/animate.min.css',       
         'public/lib/vendors/sweet-alert/sweet-alert.min.css',   
         'public/lib/vendors/material-icons/material-design-iconic-font.min.css',   
         'public/lib/vendors/socicon/socicon.min.css',   
+          
       ],
       js: [
         'public/lib/angular/angular.js',
@@ -28,6 +30,8 @@ module.exports = {
         'public/lib/angular-sanitize/angular-sanitize.js', 
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/angular-ui-utils/ui-utils.js',
+        'public/lib/angular-aria/angular-aria.js', 
+        'public/lib/angular-material/angular-material.js', 
 
         'public/lib/jquery/dist/jquery.js',
         'public/lib/bootstrap/dist/js/bootstrap.js',
