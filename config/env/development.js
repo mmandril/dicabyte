@@ -2,7 +2,6 @@
 
 module.exports = {
 	db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/dicabyte',
-	
 	app: {
 		title: 'DicaByte - O Jeito mais fácil de achar prodtos de informática na internet!',
     description: 'Busca de produtos de lojas físicas relacionadas a informática e afins.',

@@ -8,7 +8,19 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 	function($locationProvider) {
 		$locationProvider.hashPrefix('!');
 	}
-]);
+])
+.run(['$rootScope', '$location', '$window', function($rootScope, $location, $window){
+  $rootScope
+  .$on('$stateChangeSuccess',
+    function(event){ 
+      if (!$window.ga) {
+        return; 
+      }
+      alert($location.path());
+      $window.ga('send', 'pageview', { page: $location.path() });
+    });
+}]);
+
 
 //Then define the init function for starting up the application
 angular.element(document).ready(function() {
