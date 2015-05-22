@@ -16,7 +16,6 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
       if (!$window.ga) {
         return; 
       }
-      alert($location.path());
       $window.ga('send', 'pageview', { page: $location.path() });
     });
 }]);
